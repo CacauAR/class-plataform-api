@@ -8,13 +8,18 @@ const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
 const app        = express();
 
+const subjects = require('./routes/v1/subject');
+
 const port = process.env.PORT;
 
 // DB Configuration
-const {mongoose}      = require('./db/mongoose');
+const {mongoose} = require('./db/mongoose');
 
 // Middleware
 app.use(bodyParser.json());
+
+// Routes
+app.use('/v1/subjects', subjects);
 
 app.get('/', (req, res) => {
    res.send('Invalid Endpoint');

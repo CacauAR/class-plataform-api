@@ -4,7 +4,7 @@
   "description": "Revised api version from WebSmartCamera term paper, using MongoJS, Express and NodeJS.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server/server.js",
     "start-watch": "nodemon --exec \"npm start\" ",
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/tests/*.test.js"
   },
